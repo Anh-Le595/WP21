@@ -1,0 +1,430 @@
+span{
+	font-family: "Maitree";
+}
+
+/*========================================================================
+==========================   SIDEBAR  ====================================
+========================================================================*/
+
+.container{
+	margin-top: 70px;
+}
+
+div#sidebar{
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	background-color: white;
+}
+
+div.menu{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div.menu h5{
+	padding-top: 7px;
+}
+
+div.item{
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+}
+
+div.item:last-child{
+	margin-bottom: 20px;
+}
+
+		/*Center Body*/
+
+img#ic_img{
+	float: left;
+	margin-left: 10px;
+	background-image: url("../image/window.svg");
+	height: 50px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+div#hd{
+	margin-left: 30px;
+}
+
+img#header_center_bd{
+	box-shadow: 1px 1px 1px;
+	border-radius: 5px;
+	margin: 10px;
+	width: 600px;
+	max-height: 60px;
+}
+
+span#wd{
+	display: inline;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+input#search_frame{
+	width: 100%;
+	margin: 20px;
+	border-radius: 5px;
+}
+button#btn_search{
+	width: 50%;
+	margin: 15px;
+	font-weight: bold;
+}
+
+button.tab{
+	margin: 20px;
+	border-radius: 5px;
+	height: 40px;
+}
+
+div.user{
+	margin-left: 30px;
+	/*border-radius: 5px;*/
+	/*box-shadow: 1px 1px 1px 1px;*/
+	margin-right: 20px;
+}
+
+div img.img_star{
+	height: 15px;
+}
+
+/*========================================================================
+==========================   PRODUCT  ====================================
+========================================================================*/
+
+div.product{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px 20px 20px 20px;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	background-color: white;
+	overflow: hidden;
+}
+
+/* ===================== slideshow ===================== */
+
+#slideshow{
+	position: relative;
+	width: 100%;
+	height: 440px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#slideshow #center-card{
+	height: 400px;
+	border-radius: 10px;
+	border: 1px rgba(235,235,235,1) solid;
+	box-shadow: 0 8px 16px rgba(236,237,238,1);
+}
+
+#center-card h2{
+	text-align: center;
+	margin: 30px 0;
+}
+
+#slideshow #left-card div{
+	width: 50px;
+	height: 300px;
+	position: relative;
+	border-radius: 10px;
+	border: 1px rgba(235,235,235,1) solid;
+	box-shadow: 0 4px 8px rgba(236,237,238,1);
+	top: 50px;
+	left: -30px;
+}
+
+#slideshow #right-card div{
+	width: 50px;
+	height: 300px;
+	position: relative;
+	border-radius: 10px;
+	border: 1px rgba(235,235,235,1) solid;
+	box-shadow: 0 4px 8px rgba(236,237,238,1);
+	top: 50px;
+	left: 0px;
+}
+
+.arrow{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+
+#toleft{
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    right: 5px;
+    top: 135px;
+    cursor: pointer;
+}
+
+#toright{
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    left: 5px;
+    top: 135px;
+    cursor: pointer;
+}
+
+#slideshow .product-logo-big{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px; 
+}
+
+.star-group{
+	display: block;
+	margin: 0 auto;
+}
+
+.free{
+	margin: 20px 0;
+}
+
+ul.inf{
+	padding: 0px;
+	list-style: none;
+}
+ul.inf li{
+
+	display: inline;
+}
+ul.inf li:after{
+	content: ",";
+}
+ul.inf li:last-child:after{
+	content: "";
+}
+
+#circle{
+	text-align: center;
+	list-style: none;
+	margin: 0 30px auto;
+}
+
+#circle li{
+	display: inline-block;
+}
+
+#circle li div{
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	border: 1px rgba(122,157,150,1) solid;
+	margin-left: 10px;
+	cursor: pointer;
+} 
+
+/* ===================== title ===================== */
+
+div.title{
+	width: 100%;
+	height: 60px;
+	background-image: url("../image/bg3.png");
+	background-size: 123px 60px;
+	background-repeat: repeat-x;
+	margin-left: 0;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+div.title div.title-content{
+	display: inline;
+	float: left;
+	margin-left: 20px;
+}
+
+div.title div.title-content h2{
+	margin-top: 10px;
+}
+
+img.product-icon{
+	width: 30px;
+	display: inline;
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+}
+
+ul.product-link{
+	list-style: none;
+	display: inline;
+}
+
+ul.product-link li{
+	display: inline;
+	text-decoration: none;
+}
+
+ul.product-link li a{
+	font-size: 10px;
+}
+
+ul.product-link li:after{
+	content: " >";
+}
+
+ul.product-link li:last-child:after{
+	content: "";
+}
+
+div#title h2{
+	font-family: "Maitree";
+	margin-top: 10px;
+}
+
+
+/* ===================== software information ===================== */
+
+div.home-item{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+div.software-item{
+	margin-bottom: 30px;
+}
+
+a.more{
+	float: right;
+	margin-right: 30px;
+}
+
+/*========================================================================
+==========================   RATING  ====================================
+========================================================================*/
+
+div#right{
+	width: 100%;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+}
+
+div#bxh-title{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div#bxh-title h5{
+	padding-top: 7px;
+}
+
+ul.nav li{
+	width: 50%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.bxh{
+	margin: 20px 0 20px 12px;
+}
+
+.bxh td{
+	padding: 5px 10px;
+	font-family: "Maitree";
+}
+
+.bxh tr td:first-child{
+	padding-right: 0;
+}
+
+.bxh tr td:last-child{
+	text-align: right;
+	font-family: "Sanfrancisco";
+	padding-right: 0;
+}
+
+@keyframes fadein{
+	0%{
+		opacity: 0;
+		display: block;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.image-slideitem{
+	transition: fadein 2s ease-in;
+}
+
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.bxh{
+		margin-left: 0;
+	}
+	.bxh tr td:last-child{
+		padding-right: 5px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.bxh{
+		text-align: center;
+	}
+	.bxh table{
+		display: inline;
+	}
+	div.item{
+		text-align: center;
+		margin-left: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.free{
+		display: none;
+	}
+	.star-group{
+		display: none;
+	}
+	#card-infor{
+		margin-top: 100px;
+	}
+}
+
+@media only screen and (max-width : 644px) {
+	#left-card{
+		display: none;
+	}
+	#right-card{
+		display: none;
+	}
+	#center-card{
+		width: 100%;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

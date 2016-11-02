@@ -1,0 +1,64 @@
+footer{
+	width: 100%;
+	background-color: #33363b;
+	text-align: center;
+}
+
+footer table td{
+	padding: 5px 30px 10px 30px;
+}
+
+footer div table tr:first-child a{
+	font-family: "Maitree";
+	color: white;
+}
+
+footer div table tr:last-child{
+	text-align: left;
+}
+
+footer div{
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+footer table{
+	display: inline;
+}
+
+footer ul{
+	list-style: none;
+}
+
+footer a{
+	color: white;
+}
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	footer table td{
+		padding: 5px 20px 10px 20px;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 400px) {
+	footer table{
+		display: none;
+	}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

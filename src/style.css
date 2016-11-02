@@ -1,0 +1,115 @@
+@font-face{
+	font-family: "Sanfrancisco";
+	src: url("font/SanFranciscoDisplay-Ultralight.otf");
+}
+
+@font-face{
+	font-family: "Maitree";
+	src: url("font/Maitree-Bold.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgba(245,245,245,1);
+}
+
+a, span, p, button, input{
+  font-family: "Sanfrancisco";
+  font-size: 14px;
+  color: #263238;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Maitree";
+}
+
+input, button, a:focus{
+  outline: 0;
+}
+
+.btn-download{
+  font-family: "Maitree";
+  padding-top: 2px;
+  width: 145px;
+	height: 40px;
+	color: rgba(254,88,12,1);
+	border-radius: 7px;
+	border: 3px rgba(254,88,12,1) solid;
+	background-color: white;
+  
+  border-top: 3px solid rgba(254,88,12,1);
+  border-bottom: 3px solid rgba(239,45,84,1);
+  
+  -webkit-background-size: 3px 0;
+  -o-background-size: 3px 0;
+  -moz-background-size: 3px 0;
+  background-size: 3px 0;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  
+  background-image: -webkit-linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+  background-image: -o-linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+  background-image: -moz-linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+  background-image: linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+
+  margin: 0 auto;
+}
+
+.btn-download:focus{
+  outline: 0 !important;
+}
+
+.btn-download:active{
+  box-shadow: 0 0 4px rgba(254,88,12,1);
+}
+
+.btn-download:hover{
+   color: white;
+   border-style: none;
+   background: orange;
+   background: -webkit-linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+   background: -o-linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+   background: linear-gradient(rgba(254,88,12,1), rgba(239,45,84,1));
+}
+
+.product-logo-big{
+  border-radius: 18px;
+  border: 1px rgba(235,235,235,1) solid;
+  box-shadow: 0 5px 10px #ebebeb;
+  height: 163px;
+}
+
+.product-logo{
+  border-radius: 10px;
+  border: 1px rgba(235,235,235,1) solid;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 73px;
+}
+
+.product-icon{
+  width: 30px;
+  display: inline;
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+}
+
+
+.star{
+  width: 16px;
+  position: relative;
+  top: -2px;
+}
+
+.free{
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: #33363b;
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+}

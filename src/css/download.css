@@ -1,0 +1,224 @@
+span{
+	font-family: "Maitree";
+}
+
+/*========================================================================
+==========================   SIDEBAR  ====================================
+========================================================================*/
+
+.container{
+	margin-top: 70px;
+}
+
+div#sidebar{
+	width: 100%;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+}
+
+div.menu{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div.menu h5{
+	padding-top: 7px;
+}
+
+div.item{
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+}
+
+div.item:last-child{
+	margin-bottom: 20px;
+}
+
+		/*Center Body*/
+
+img#ic_img{
+	float: left;
+	margin-left: 10px;
+	background-image: url("../image/window.svg");
+	height: 50px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+div#hd{
+	margin-left: 30px;
+}
+
+img#header_center_bd{
+	box-shadow: 1px 1px 1px;
+	border-radius: 5px;
+	margin: 10px;
+	width: 600px;
+	/*background-repeat: 3;*/
+	/*height: 60px;*/
+	max-height: 60px;
+	/*background-image: url("Image/bg3.png");*/
+	/*background-repeat: no-repeat;*/
+}
+
+span#wd{
+	display: inline;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+input#search_frame{
+	width: 100%;
+	margin: 20px;
+	border-radius: 5px;
+}
+button#btn_search{
+	width: 50%;
+	margin: 15px;
+	font-weight: bold;
+}
+
+button.tab{
+	margin: 20px;
+	border-radius: 5px;
+	height: 40px;
+}
+
+div.user{
+	margin-left: 30px;
+	/*border-radius: 5px;*/
+	/*box-shadow: 1px 1px 1px 1px;*/
+	margin-right: 20px;
+}
+
+div img.img_star{
+	height: 15px;
+}
+
+/*========================================================================
+==========================   PRODUCT  ====================================
+========================================================================*/
+
+div.center{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px #ebebeb solid;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.center h3{
+	margin: 30px 0 0 30px;
+}
+
+.download-item{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.download-item img{
+	display: inline;
+}
+
+.download-item p{
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.download-item .appstore-logo{
+	width: 145px;
+}
+
+.download-item:last-child{
+	margin-bottom: 100px;
+}
+
+/*========================================================================
+==========================   RATING  ====================================
+========================================================================*/
+
+div#right{
+	width: 100%;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	background-color: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div#related{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+	background-color: white;
+	overflow: hidden;
+}
+
+.related-item{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.related-item .product-logo{
+	margin-left: 12px;
+}
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.related-infor h5{
+		margin-left: 20px;
+	}
+
+	.related-infor p{
+		margin-left: 20px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.btn-download{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.appstore-logo{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	div.item{
+		text-align: center;
+		margin-left: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.btn-download{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.appstore-logo{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

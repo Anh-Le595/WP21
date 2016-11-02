@@ -1,0 +1,92 @@
+body div#account-box{
+	width: 50%;
+	margin: 50px auto;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px rgba(235,235,235,1) solid;
+}
+
+body div#account-box #logo{
+	width: 100%;
+	background-color: #33363b;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 30px;
+}
+
+span{
+	color: rgba(254,88,12,1);
+}
+
+form{
+	width: 60%;
+	margin: 30px auto;
+	margin-bottom: 70px;
+}
+
+label{
+	display: block;
+	font-family: "Sanfrancisco";
+}
+
+input{
+	font-family: "Sanfrancisco";
+	width: 100%;
+	display: block;
+	padding: 5px 20px;
+	border-radius: 7px;
+	border: 1px #7a9e97 solid;
+}
+
+input[type="submit"]{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	font-family: "Maitree";
+	color: white;
+	background: -webkit-linear-gradient(#707885, #33363b);
+	background: -o-linear-gradient(#707885, #33363b);
+	background: linear-gradient(#707885, #33363b);
+}
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	body div#account-box{
+		width: 60%;
+	}
+	form{
+		width: 70%;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	body div#account-box{
+		width: 70%;
+		margin-top: 200px;
+	}
+	form{
+		width: 80%;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	body div#account-box{
+		width: 86%;
+		margin-top: 100px;
+	}
+	form{
+		width: 80%;
+	}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	body div#account-box{
+		width: 96%;
+		margin-top: 100px;
+	}
+	form{
+		width: 86%;
+	}
+}

@@ -1,0 +1,359 @@
+span{
+	font-family: "Maitree";
+}
+
+
+
+/*========================================================================
+==========================   SIDEBAR  ====================================
+========================================================================*/
+
+.container{
+	margin-top: 70px;
+}
+
+div#sidebar{
+	width: 100%;
+	background-color: white;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div.menu{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div.menu h5{
+	padding-top: 7px;
+}
+
+div.item{
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+}
+
+div.item:last-child{
+	margin-bottom: 20px;
+}
+
+		/*Center Body*/
+
+img#ic_img{
+	float: left;
+	margin-left: 10px;
+	background-image: url("../image/window.svg");
+	height: 50px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+div#hd{
+	margin-left: 30px;
+}
+
+img#header_center_bd{
+	box-shadow: 1px 1px 1px;
+	border-radius: 5px;
+	margin: 10px;
+	width: 600px;
+	/*background-repeat: 3;*/
+	/*height: 60px;*/
+	max-height: 60px;
+	/*background-image: url("Image/bg3.png");*/
+	/*background-repeat: no-repeat;*/
+}
+
+span#wd{
+	display: inline;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+input#search_frame{
+	width: 100%;
+	margin: 20px;
+	border-radius: 5px;
+}
+button#btn_search{
+	width: 50%;
+	margin: 15px;
+	font-weight: bold;
+}
+
+button.tab{
+	margin: 20px;
+	border-radius: 5px;
+	height: 40px;
+}
+
+div.user{
+	margin-left: 30px;
+	/*border-radius: 5px;*/
+	/*box-shadow: 1px 1px 1px 1px;*/
+	margin-right: 20px;
+}
+
+div img.img_star{
+	height: 15px;
+}
+
+/*========================================================================
+==========================   PRODUCT  ====================================
+========================================================================*/
+
+
+/* ===================== search ===================== */
+
+div.search{
+	margin: 0 0 20px 0;
+}
+
+div.search input{
+	width: 75%;
+	margin: 20px;
+	padding: 5px 20px;
+	border-radius: 7px;
+	border: 1px #7a9e97 solid;
+}
+
+div.search #btn-search{
+	border-radius: 7px;
+	border: 1px #7a9e97 solid;
+	padding: 5px 20px;
+	font-family: "Maitree";
+	color: white;
+	background: -webkit-linear-gradient(#707885, #33363b);
+	background: -o-linear-gradient(#707885, #33363b);
+	background: linear-gradient(#707885, #33363b);
+}	
+
+div.search .sort{
+	margin-bottom: 70px;
+	margin-left: 20px;
+}
+
+div.search .sort button{
+	border-radius: 7px;
+	border: 1px #7a9e97 solid;
+	background-color: #ebebeb;
+	padding: 5px 15px;
+	margin-bottom: 10px;
+}
+
+div.search .sort button:focus{
+	background-color: #7a9e97;
+}
+
+
+/* ===================== product information ===================== */
+
+div.product{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px 20px 20px 20px;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	background-color: white;
+}
+
+div.product-item{
+	margin-bottom: 70px;
+}
+
+div.product-content{
+}
+
+img.product-logo{
+	float: left;
+	display: inline;
+	margin-left: 20px;
+}
+
+div.product-information{
+	float: left;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+div.product-download{
+	margin-top: 60px;
+}
+
+div.product-information h5{
+	font-family: "Maitree";
+	margin-top: 0;
+}
+
+div.rating{
+	margin-bottom: 10px;
+}
+
+div.rating span{
+	font-family: "Sanfrancisco";
+}
+
+ul.inf{
+	padding: 0px;
+	list-style: none;
+}
+ul.inf li{
+
+	display: inline;
+}
+ul.inf li:after{
+	content: ",";
+}
+ul.inf li:last-child:after{
+	content: "";
+}
+
+/* ===================== paging ===================== */
+
+ul.paging{
+	list-style: none;
+	margin: 20px auto;
+	text-align: center;
+}
+
+ul.paging li{
+	display: inline;
+}
+
+ul.paging li button{
+	text-decoration: none;
+	margin-right: 0px;
+	width: 30px;
+	height: 30px;
+	border: 1px #7a9d96 solid;
+	border-radius: 5px;
+	background-color: #ebebeb;
+	text-align: center;
+}
+
+ul.paging li button:focus{
+	background-color: #7a9d96;
+}
+
+/*========================================================================
+==========================   RATING  ====================================
+========================================================================*/
+
+div#right{
+	width: 100%;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+}
+
+div#bxh{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div#bxh h5{
+	padding-top: 7px;
+}
+
+ul.nav li{
+	width: 50%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.bxh{
+	margin: 20px 0 20px 15px;
+}
+
+.bxh td{
+	padding: 5px 10px;
+	font-family: "Maitree";
+}
+
+.bxh tr td:first-child{
+	padding-right: 0;
+}
+
+.bxh tr td:last-child{
+	text-align: right;
+	font-family: "Sanfrancisco";
+	padding-right: 0;
+}
+
+
+
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.bxh{
+		margin-left: 0;
+	}
+	.bxh tr td:last-child{
+		padding-right: 5px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.bxh{
+		text-align: center;
+	}
+	.bxh table{
+		display: inline;
+	}
+	div.item{
+		text-align: center;
+		margin-left: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+@media only screen and (max-width : 594px) {
+	.btn-download{
+		margin: 20px 0 30px 110px;
+	}
+}
+
+@media only screen and (max-width : 524px) {
+	.search input{
+		margin-bottom: 10px;
+	}
+
+	#btn-search{
+		margin-top: 0;
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+}
+
+@media only screen and (max-width : 448px) {
+	.btn-download{
+		margin: 20px 0 0 20px;
+	}
+	.product-logo{
+		margin-bottom: 20px;
+	}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

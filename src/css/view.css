@@ -1,0 +1,180 @@
+span{
+	font-family: "Maitree";
+}
+
+
+/*========================================================================
+==========================   PRODUCT  ====================================
+========================================================================*/
+
+/*======================= card ===========================*/
+
+div.card{
+	width: 90%;
+	display: block;
+	margin: 20px auto;
+	border: 1px #ebebeb solid;
+	border-radius: 10px;
+	box-shadow: 0 0 20px #ebebeb;
+	height: 400px;
+	text-align: center;
+	cursor: pointer;
+	transform-style: preserve-3d;
+}
+
+div.card img{
+	margin-top: 20px;
+	transform: translateZ(30px);
+}
+
+div.card h3{
+	margin-top: 50px;
+	transform: translateZ(45px);
+}
+
+div.card div#star-group{
+	margin-top: 25px;
+	transform: translateZ(20px);
+}
+
+div.card p{
+	margin-top: 25px;
+	transform: translateZ(30px);
+}
+
+div.product-information{
+	padding: 20px 0 20px 20px;
+	margin-top: 50px;
+}
+
+ul.inf{
+	padding: 0px;
+	list-style: none;
+}
+ul.inf li{
+
+	display: inline;
+}
+ul.inf li:after{
+	content: ",";
+}
+ul.inf li:last-child:after{
+	content: "";
+}
+
+/*======================= description ===========================*/
+
+div#description{
+}
+
+div#description h5{
+	margin-left: 30px;
+}
+
+div#description p{
+	margin: 0 30px 0 30px;
+	text-align: justify;
+}
+
+/*======================= rating ===========================*/
+
+div#comment{
+	margin: 30px 30px 0 30px;
+}
+
+div#comment div.row{
+	margin-top: 20px;
+}
+
+div#comment a{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+p#write-comment{
+	margin-bottom: 30px;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+input.write-comment-hidden{
+	width: 75%;
+	margin: 20px;
+	padding: 5px 20px;
+	border-radius: 7px;
+	border: 1px #7a9e97 solid;
+}
+
+button.write-comment-hidden{
+	border-radius: 7px;
+	border: 1px #7a9e97 solid;
+	padding: 5px 20px;
+	font-family: "Maitree";
+	color: white;
+	background: -webkit-linear-gradient(#707885, #33363b);
+	background: -o-linear-gradient(#707885, #33363b);
+	background: linear-gradient(#707885, #33363b);
+}	
+
+
+#write-comment-popup{
+	display: none;
+	width: 90%;
+	margin-bottom: 30px;
+}
+
+#write-comment-popup .star-group-empty{
+	margin-left: 25px;
+}
+
+.star-group-empty div{
+	width: 16px;
+	height: 16px;
+	background-size: 16px 16px;
+	background-image: url("../image/star_empty.svg");
+	display: inline-block;
+	cursor: pointer;
+}
+
+
+
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.btn-download{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.appstore-logo{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	div.item{
+		text-align: center;
+		margin-left: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.btn-download{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.appstore-logo{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
