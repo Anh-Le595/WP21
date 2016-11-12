@@ -27,6 +27,7 @@ CREATE TABLE `products` (
 	`size` VARCHAR(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`Name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,  
 	`Company` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,  
+	`OS` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 	`Version` VARCHAR(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,  
 	`UpdateTime` VARCHAR(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,  
 	`Tag` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,  

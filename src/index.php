@@ -9,14 +9,6 @@
 	else $contents = "";
 ?>
 
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -64,6 +56,8 @@
 			    }
 		};
     </script>
+
+
 
 	<div class="container">
 				<!-- Body -->
