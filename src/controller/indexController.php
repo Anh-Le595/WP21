@@ -19,6 +19,10 @@
 		$query = "SELECT * FROM `products` WHERE `OS` = 'Android'  ";
 		return mysqli_query($dbhandle, $query);
 	}
+	function getDataById($id,$dbhandle){
+		$query = "SELECT * FROM `products` WHERE `ID` = $id  ";
+		return mysqli_query($dbhandle, $query);
+	}
 	
 	
 ?>

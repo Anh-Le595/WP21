@@ -1,7 +1,9 @@
+
 <?php
 
 	require "controller/connectdatabase.php";
 	require "controller/indexController.php";
+	
 	
 	if(isset($_GET["contents"])) {
 		$contents = $_GET["contents"];
@@ -89,6 +91,8 @@
 							require "contents/center_body.php";
 							break;
 					}
+					
+				
 
 					
 				?>
@@ -101,7 +105,7 @@
 				<!-- <?php //require "contents/right_body.php"; ?>	 -->
 				<!-- <?php //require "contents/related.php"; ?> -->
 				<?php
-					if ($contents == 'view' || $contents == 'download')
+					if (strpos($contents,'view') != false || $contents == 'download')
 						require "contents/related.php";
 					else 
 						require "contents/right_body.php";

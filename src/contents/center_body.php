@@ -115,7 +115,7 @@ $products_windows = getWindow($dbhandle);
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_window = mysqli_fetch_array($products_windows);
 	?>
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_window['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12">
             	<img class="product-logo" src=" <?php echo $product_window['Logo']?>" alt=""/>
             </div>
@@ -125,11 +125,12 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
+        </a>
      <?php } ?>
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_window = mysqli_fetch_array($products_windows);
 	?>
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_window['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src=" <?php echo  $product_window['Logo']?>" alt=""></div>
 			<div class="col-sm-8 col-xs-12">
 				<h5><?php echo $product_window['Name']?></h5>
@@ -137,14 +138,14 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
-	
+	</a>
        <?php } ?>
     </div>
     
 	<div class="row">
 		<div class="col-xs-6 software-item"></div>
 		<div class="col-xs-6 software-item">
-			<a href="#" class="more">Xem thêm</a>
+			<a href="contents/search.php" class="more">Xem thêm</a>
 		</div>
 	</div>
 </div>
@@ -162,7 +163,7 @@ $products_windows = getWindow($dbhandle);
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_mac = mysqli_fetch_array($product_macs);
 	?>
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_mac['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_mac['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_mac['Name']?></h5>
@@ -170,14 +171,15 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
-        
+        </a>
      <?php } ?> 
      
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_mac = mysqli_fetch_array($product_macs);
 	?>
      
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_mac['ID'] ?> ">
+        <div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_mac['Logo']?>" alt=""></div>
 			<div class="col-sm-8 col-xs-12">
 				<h5><?php echo $product_mac['Name']?></h5>
@@ -185,7 +187,7 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
-        
+        </a>
        <?php } ?> 
         
 	</div>
@@ -212,7 +214,7 @@ $products_windows = getWindow($dbhandle);
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_android = mysqli_fetch_array($product_Androids);
 	?>
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_android['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_android['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_android['Name']?></h5>
@@ -220,11 +222,12 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
+        </a>
         <?php } ?>
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_android = mysqli_fetch_array($product_Androids);
 	?>
-     
+     <a href="contents/view.php?id=<?php echo $product_android['ID'] ?> ">
 		<div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_android['Logo']?>" alt=""></div>
 			<div class="col-sm-8 col-xs-12">
@@ -233,6 +236,7 @@ $products_windows = getWindow($dbhandle);
 				<img src="../image/star.svg" alt="" class="star">
 			</div>
 		</div>
+        </a>
       <?php } ?>
 	</div>
 
@@ -256,7 +260,8 @@ $products_windows = getWindow($dbhandle);
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_ios = mysqli_fetch_array($product_iOS);
 	?>
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_ios['ID'] ?> ">
+        <div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_ios['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_ios['Name']?></h5>
@@ -264,13 +269,15 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
+        </a>
         <?php } ?>
         
         
 		 <?php 
 	for($i = 1; $i<=3;$i++) {$product_ios = mysqli_fetch_array($product_iOS);
 	?>
-		<div class="col-xs-6 software-item">
+		<a href="contents/view.php?id=<?php echo $product_ios['ID'] ?> ">
+        <div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_ios['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_ios['Name']?></h5>
@@ -278,6 +285,7 @@ $products_windows = getWindow($dbhandle);
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
+        </a>
         <?php } ?>
 	</div>
 
