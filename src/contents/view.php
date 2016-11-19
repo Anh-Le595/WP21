@@ -1,17 +1,4 @@
 
-<?php include ("../controller/connectdatabase.php");?>
-<?php include ("../controller/indexController.php");?>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../bootstrap/jQuery/jquery-3.1.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/header.css">
-<link rel="stylesheet" type="text/css" href="../css/view.css">
-<link rel="stylesheet" type="text/css" href="../css/footer.css">
-<script src="../js/card.js"></script>
-<script src="../js/star.js"></script>
-<script src="../js/writecomment.js"></script>
-<link rel="stylesheet" type="text/css" href="../style.css">
-<link rel="stylesheet" type="text/css" href="../header.css">
 <?php $id = $_GET['id'];
 $productDatas=getDataById($id,$dbhandle);
 $product = mysqli_fetch_array($productDatas)
@@ -30,7 +17,7 @@ $product = mysqli_fetch_array($productDatas)
 				<img class="star" src="contents/image/star.svg" alt="">
 			</div>
 			<p class="free">FREE</p>
-			<script type="text/javascript" src="../js/card.js"></script>
+			<script type="text/javascript" src="js/card.js"></script>
 		</div>
 	</div>
 	<div class="col-sm-5 product-information">
@@ -44,9 +31,9 @@ $product = mysqli_fetch_array($productDatas)
 			Xem thêm:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</p>
 		<ul class="inf" style="display:inline">
-			<li><a href="#">Diệt virus</a></li>
-			<li><a href="#">Window</a></li>
-			<li><a href="#">Mac OS</a></li>
+			<li><a href="?contents=product&&pass=Diệt Virus">Diệt virus</a></li>
+			<li><a href="?contents=product&&pass=Window">Window</a></li>
+			<li><a href="?contents=product&&pass=Mac OS">Mac OS</a></li>
 		</ul>
 		<div>
 			<img src="contents/image/window.svg" alt="" class="product-icon">

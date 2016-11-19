@@ -27,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/search.css">
 	<link rel="stylesheet" type="text/css" href="css/download.css">
 	<link rel="stylesheet" type="text/css" href="css/view.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
 </head>
 <body>
 
@@ -35,7 +36,7 @@
 			<button class="btn btn-default" id="menu-toggle"></button>
 		</span>
 		<span id="page-logo">
-			<img src="image/logo.png" alt="">
+			<a href="?content=index"><img src="image/logo.png" alt=""></a>
 		</span>
 		<span>
 			<input id="search" type="text" name="search" placeholder="Tìm kiếm phần mềm...">
@@ -87,6 +88,9 @@
 						case 'search':
 							require "contents/search.php";
 							break;
+						case 'product':
+							require "contents/product.php";
+							break;
 						default:
 							require "contents/center_body.php";
 							break;
@@ -105,7 +109,7 @@
 				<!-- <?php //require "contents/right_body.php"; ?>	 -->
 				<!-- <?php //require "contents/related.php"; ?> -->
 				<?php
-					if (strpos($contents,'view') != false || $contents == 'download')
+					if ($contents == 'view' || $contents == 'download')
 						require "contents/related.php";
 					else 
 						require "contents/right_body.php";
