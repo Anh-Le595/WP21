@@ -19,17 +19,17 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<!-- ======================================================================= -->
-				<img src="../image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
-				<img src="../image/logo_avira.png" alt="" class="product-logo-big image-slideitem">
-				<img src="../image/logo_avg.jpg" alt="" class="product-logo-big image-slideitem">
+				<img src="image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
+				<img src="image/logo_avira.png" alt="" class="product-logo-big image-slideitem">
+				<img src="image/logo_avg.jpg" alt="" class="product-logo-big image-slideitem">
 			</div>
 			<div class="col-sm-6" style="text-align:center;">
 				<div class="star-group">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
+					<img class="star" src="image/star.svg" alt="">
+					<img class="star" src="image/star.svg" alt="">
+					<img class="star" src="image/star.svg" alt="">
+					<img class="star" src="image/star.svg" alt="">
+					<img class="star" src="image/star.svg" alt="">
 				</div>
 				<p class="free">FREE</p>
 				<button class="btn-download" name="btndownload" onclick="demo()" style="display:block;margin:20px auto;">DOWNLOAD</button>
@@ -101,7 +101,7 @@
 
 <div class="home-item">
 	<div class="row title">
-		<img class="product-icon" src="../image/window.svg" alt="">
+		<img class="product-icon" src="image/window.svg" alt="">
 		<div class="title-content">
 			<h2 class="product-title">Window</h2>
 		</div>

@@ -20,6 +20,7 @@
   	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 	
   	<script type="text/javascript" src="bootstrap/jQuery/jquery-3.1.0.min.js"></script>  
   	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/search.js"></script>
   	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -38,7 +39,10 @@
 			<img src="image/logo.png" alt="">
 		</span>
 		<span>
+			<formid action="" method="GET" role="form">
 			<input id="search" type="text" name="search" placeholder="Tìm kiếm phần mềm...">
+			</form>
+			
 			<a id="page-infor" href="#"></a>
 			<a id="account" href="register.php"></a>
 		</span>
