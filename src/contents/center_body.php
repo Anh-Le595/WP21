@@ -101,7 +101,7 @@
 
 <div class="home-item">
 	<div class="row title">
-		<img class="product-icon" src="../image/window.svg" alt="">
+		<img class="product-icon" src="image/window.svg" alt="">
 		<div class="title-content">
 			<h2 class="product-title">Window</h2>
 		</div>
@@ -115,7 +115,7 @@ $products_windows = getWindow($dbhandle);
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_window = mysqli_fetch_array($products_windows);
 	?>
-		<a href="contents/view.php?id=<?php echo $product_window['ID'] ?> "><div class="col-xs-6 software-item">
+		<a href="?contents=view&&id=<?php echo $product_window['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12">
             	<img class="product-logo" src=" <?php echo $product_window['Logo']?>" alt=""/>
             </div>
@@ -130,7 +130,7 @@ $products_windows = getWindow($dbhandle);
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_window = mysqli_fetch_array($products_windows);
 	?>
-		<a href="contents/view.php?id=<?php echo $product_window['ID'] ?> "><div class="col-xs-6 software-item">
+		<a href="?contents=view&&id=<?php echo $product_window['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src=" <?php echo  $product_window['Logo']?>" alt=""></div>
 			<div class="col-sm-8 col-xs-12">
 				<h5><?php echo $product_window['Name']?></h5>
@@ -145,7 +145,7 @@ $products_windows = getWindow($dbhandle);
 	<div class="row">
 		<div class="col-xs-6 software-item"></div>
 		<div class="col-xs-6 software-item">
-			<a href="contents/search.php" class="more">Xem thêm</a>
+			<a href="?contents=product&&pass=<?php echo $product_window['OS'] ?>" class="more">Xem thêm</a>
 		</div>
 	</div>
 </div>
@@ -153,7 +153,7 @@ $products_windows = getWindow($dbhandle);
 
 <div class="home-item">
 	<div class="row title">
-		<img class="product-icon" src="../image/apple.svg" alt="">
+		<img class="product-icon" src="image/apple.svg" alt="">
 		<div class="title-content">
 			<h2 class="product-title">MacOS</h2>
 		</div>
@@ -163,7 +163,7 @@ $products_windows = getWindow($dbhandle);
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_mac = mysqli_fetch_array($product_macs);
 	?>
-		<a href="contents/view.php?id=<?php echo $product_mac['ID'] ?> "><div class="col-xs-6 software-item">
+		<a href="?contents=view&&id=<?php echo $product_mac['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_mac['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_mac['Name']?></h5>
@@ -178,7 +178,7 @@ $products_windows = getWindow($dbhandle);
 	for($i = 1; $i<=3;$i++) {$product_mac = mysqli_fetch_array($product_macs);
 	?>
      
-		<a href="contents/view.php?id=<?php echo $product_mac['ID'] ?> ">
+		<a href="?contents=view&&id=<?php echo $product_mac['ID'] ?> ">
         <div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_mac['Logo']?>" alt=""></div>
 			<div class="col-sm-8 col-xs-12">
@@ -195,7 +195,7 @@ $products_windows = getWindow($dbhandle);
 	<div class="row">
 		<div class="col-xs-6 software-item"></div>
 		<div class="col-xs-6 software-item">
-			<a href="#" class="more">Xem thêm</a>
+			<a href="?contents=product&&pass=<?php echo $product_mac['OS'] ?>" class="more">Xem thêm</a>
 		</div>
 	</div>
 </div>
@@ -204,7 +204,7 @@ $products_windows = getWindow($dbhandle);
 
 <div class="home-item">
 	<div class="row title">
-		<img class="product-icon" src="../image/android.svg" alt="">
+		<img class="product-icon" src="image/android.svg" alt="">
 		<div class="title-content">
 			<h2 class="product-title">Android</h2>
 		</div>
@@ -214,7 +214,7 @@ $products_windows = getWindow($dbhandle);
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_android = mysqli_fetch_array($product_Androids);
 	?>
-		<a href="contents/view.php?id=<?php echo $product_android['ID'] ?> "><div class="col-xs-6 software-item">
+		<a href="?contents=view&&id=<?php echo $product_android['ID'] ?> "><div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_android['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_android['Name']?></h5>
@@ -227,13 +227,13 @@ $products_windows = getWindow($dbhandle);
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_android = mysqli_fetch_array($product_Androids);
 	?>
-     <a href="contents/view.php?id=<?php echo $product_android['ID'] ?> ">
+     <a href="?contents=view&&id=<?php echo $product_android['ID'] ?> ">
 		<div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_android['Logo']?>" alt=""></div>
 			<div class="col-sm-8 col-xs-12">
 				<h5><?php echo $product_android['Name']?></h5>
 				<p style="display:inline;"><?php echo $product_android['Rate']?></p>
-				<img src="../image/star.svg" alt="" class="star">
+				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
         </a>
@@ -243,14 +243,14 @@ $products_windows = getWindow($dbhandle);
 	<div class="row">
 		<div class="col-xs-6 software-item"></div>
 		<div class="col-xs-6 software-item">
-			<a href="#" class="more">Xem thêm</a>
+			<a href="?contents=product&&pass=<?php echo $product_android['OS'] ?>" class="more">Xem thêm</a>
 		</div>
 	</div>
 </div>
 
 <div class="home-item">
 	<div class="row title">
-		<img class="product-icon" src="../image/apple.svg" alt="">
+		<img class="product-icon" src="image/apple.svg" alt="">
 		<div class="title-content">
 			<h2 class="product-title">iOS</h2>
 		</div>
@@ -260,7 +260,7 @@ $products_windows = getWindow($dbhandle);
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_ios = mysqli_fetch_array($product_iOS);
 	?>
-		<a href="contents/view.php?id=<?php echo $product_ios['ID'] ?> ">
+		<a href="?contents=view&&id=<?php echo $product_ios['ID'] ?> ">
         <div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_ios['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
@@ -276,12 +276,12 @@ $products_windows = getWindow($dbhandle);
 		 <?php 
 	for($i = 1; $i<=3;$i++) {$product_ios = mysqli_fetch_array($product_iOS);
 	?>
-		<a href="contents/view.php?id=<?php echo $product_ios['ID'] ?> ">
+		<a href="?contents=view&&id=<?php echo $product_ios['ID'] ?> ">
         <div class="col-xs-6 software-item">
 			<div class="col-sm-4 col-xs-12"><img class="product-logo" src="<?php echo $product_ios['Logo']?>" alt=""></div>
 			<div class="col-sm-8  col-xs-12">
 				<h5><?php echo $product_ios['Name']?></h5>
-				<p style="display:inline;"><?php echo $product_android['Rate']?></p>
+				<p style="display:inline;"><?php echo $product_ios['Rate']?></p>
 				<img src="image/star.svg" alt="" class="star">
 			</div>
 		</div>
@@ -292,7 +292,7 @@ $products_windows = getWindow($dbhandle);
 	<div class="row">
 		<div class="col-xs-6 software-item"></div>
 		<div class="col-xs-6 software-item">
-			<a href="#" class="more">Xem thêm</a>
+			<a href="?contents=product&&pass=<?php echo $product_ios['OS'] ?>" class="more">Xem thêm</a>
 		</div>
 	</div>
 </div>
