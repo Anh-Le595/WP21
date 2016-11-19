@@ -1,5 +1,3 @@
-
-
 <div id="right">
 	<div class="row">
 		<div class="col-md-12">
@@ -14,40 +12,114 @@
 			    <li class="active"><a data-toggle="tab" href="#bxh1">Theo lượt tải</a></li>
 			    <li><a data-toggle="tab" href="#bxh2">Theo đánh giá</a></li>
 			</ul>
-<?php 
-$productDowns =  getRank_down($dbhandle);
-?>
+
 			<div class="tab-content">
 			    <div id="bxh1" class="tab-pane fade in active bxh">
 			    	<table>
-                    <?php 
-					for($i = 1; $i <=10 ;$i++){$product = mysqli_fetch_array($productDowns);
-					?>
 			    		<tr>
-			    			<td><?php echo $i ?></td>
-			    			<td><a href="?contents=download&&id=<?php echo $product['ID'] ?>"><?php echo $product['Name'] ?></a></td>
-			    			<td><?php echo $product['NumberDownload'] ?></td>
+			    			<td>1.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>1000k</td>
 			    		</tr>
-			    	<?php } ?>
+			    		<tr>
+			    			<td>2.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>900k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>3.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>800k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>4.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>700k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>5.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>600k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>6.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>500k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>7.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>400k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>8.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>300k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>9.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>200k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>10.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>100k</td>
+			    		</tr>
 			    	</table>
-                    
 			    </div>
-                
-                
-  <?php 
-$productRates =  getRank_rate($dbhandle);
-?>
 			    <div id="bxh2" class="tab-pane fade bxh">
 			    	<table>
-                     <?php 
-					for($i = 1; $i <=10 ;$i++){$product = mysqli_fetch_array($productRates);
-					?>
 			    		<tr>
-			    			<td><?php echo $i ?></td>
-			    			<td><a href="?contents=download&&id=<?php echo $product['ID'] ?>"><?php echo $product['Name'] ?></a></td>
-			    			<td><?php echo $product['Rate'] ?></td>
+			    			<td>1.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>1000k</td>
 			    		</tr>
-			    		<?php } ?>
+			    		<tr>
+			    			<td>2.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>900k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>3.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>800k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>4.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>700k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>5.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>600k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>6.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>500k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>7.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>400k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>8.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>300k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>9.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>200k</td>
+			    		</tr>
+			    		<tr>
+			    			<td>10.</td>
+			    			<td>TÊN PHẦN MỀM</td>
+			    			<td>100k</td>
+			    		</tr>
 			    	</table>
 			    </div>
 		  	</div>

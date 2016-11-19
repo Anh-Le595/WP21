@@ -6,14 +6,49 @@ span{
 ==========================   SIDEBAR  ====================================
 ========================================================================*/
 
+.container{
+	margin-top: 70px;
+}
 
+div#sidebar{
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	background-color: white;
+}
+
+div.menu{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div.menu h5{
+	padding-top: 7px;
+}
+
+div.item{
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+}
+
+div.item:last-child{
+	margin-bottom: 20px;
+}
 
 		/*Center Body*/
 
 img#ic_img{
 	float: left;
 	margin-left: 10px;
-	background-image: url("Image/window.svg");
+	background-image: url("../image/window.svg");
 	height: 50px;
 	padding: 5px;
 	box-sizing: border-box;
@@ -217,6 +252,53 @@ ul.paging li .active{
 ==========================   RATING  ====================================
 ========================================================================*/
 
+div#right{
+	width: 100%;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+}
+
+div#bxh{
+	height: 30px;
+	width: 90%;
+	background-image: url("../image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div#bxh h5{
+	padding-top: 7px;
+}
+
+ul.nav li{
+	width: 50%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.bxh{
+	margin: 20px 0 20px 15px;
+}
+
+.bxh td{
+	padding: 5px 10px;
+	font-family: "Maitree";
+}
+
+.bxh tr td:first-child{
+	padding-right: 0;
+}
+
+.bxh tr td:last-child{
+	text-align: right;
+	font-family: "Sanfrancisco";
+	padding-right: 0;
+}
 
 
 /*========== Non-Mobile First Method ==========*/

@@ -2,10 +2,10 @@
 
 <div id="sidebar">
 	<div class="menu"><h5>HỆ ĐIỀU HÀNH</h5></div>
-	<div class="item"><a href="?contents=product&&pass=Window">Window</a></div>
-	<div class="item"><a href="?contents=product&&pass=Mac OS">Mac OS</a></div>
-	<div class="item"><a href="?contents=product&&pass=Android">Android</a></div>
-	<div class="item"><a href="?contents=product&&pass=iOS">IOS</a></div>
+	<div class="item"><a href="#">Window</a></div>
+	<div class="item"><a href="#">Mac OS</a></div>
+	<div class="item"><a href="#">Android</a></div>
+	<div class="item"><a href="#">IOS</a></div>
 
 	<div class="menu"><h5>CHỨC NĂNG</h5></div>
 	<?php 
@@ -14,7 +14,7 @@
 	?>
 
 
-	<div class="item"><a href="?contents=product&&pass=<?php echo $category['Name'] ?>"><?php echo $category['Name'] ?></a></div>
+	<div class="item"><a href="#"><?php echo $category['Name'] ?></a></div>
 	
 
 	<?php
