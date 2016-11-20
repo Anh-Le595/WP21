@@ -63,8 +63,4 @@
 		$query = "SELECT * FROM `products` WHERE `Tag` = '$tag' ";
 		return mysqli_query($dbhandle, $query);
 	}
-	
-	
-	
-	
 ?>

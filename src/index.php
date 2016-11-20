@@ -3,6 +3,7 @@
 
 	require "controller/connectdatabase.php";
 	require "controller/indexController.php";
+	require "controller/searchController.php";
 	
 	
 	if(isset($_GET["contents"])) {
