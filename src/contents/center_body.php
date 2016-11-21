@@ -19,17 +19,17 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<!-- ======================================================================= -->
-				<img src="image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
-				<img src="image/logo_avira.png" alt="" class="product-logo-big image-slideitem">
-				<img src="image/logo_avg.jpg" alt="" class="product-logo-big image-slideitem">
+				<img src="../image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
+				<img src="../image/logo_avira.png" alt="" class="product-logo-big image-slideitem">
+				<img src="../image/logo_avg.jpg" alt="" class="product-logo-big image-slideitem">
 			</div>
 			<div class="col-sm-6" style="text-align:center;">
 				<div class="star-group">
-					<img class="star" src="image/star.svg" alt="">
-					<img class="star" src="image/star.svg" alt="">
-					<img class="star" src="image/star.svg" alt="">
-					<img class="star" src="image/star.svg" alt="">
-					<img class="star" src="image/star.svg" alt="">
+					<img class="star" src="../image/star.svg" alt="">
+					<img class="star" src="../image/star.svg" alt="">
+					<img class="star" src="../image/star.svg" alt="">
+					<img class="star" src="../image/star.svg" alt="">
+					<img class="star" src="../image/star.svg" alt="">
 				</div>
 				<p class="free">FREE</p>
 				<button class="btn-download" name="btndownload" onclick="demo()" style="display:block;margin:20px auto;">DOWNLOAD</button>
@@ -109,7 +109,7 @@
 
 
 <?php 
-$products_windows = getWindow($dbhandle);	 
+$products_windows = getDataByOS($dbhandle,'Window');	 
 ?>
 	<div class="row">
     <?php 
@@ -145,7 +145,7 @@ $products_windows = getWindow($dbhandle);
 	<div class="row">
 		<div class="col-xs-6 software-item"></div>
 		<div class="col-xs-6 software-item">
-			<a href="?contents=product&&pass=<?php echo $product_window['OS'] ?>" class="more">Xem thêm</a>
+			<a href="?contents=product&&pass=<?php echo $product_window['OS'] ?>&&page=1" class="more">Xem thêm</a>
 		</div>
 	</div>
 </div>
@@ -158,7 +158,7 @@ $products_windows = getWindow($dbhandle);
 			<h2 class="product-title">MacOS</h2>
 		</div>
 	</div>
-<?php $product_macs = getMacOS($dbhandle) ?>
+<?php $product_macs = getDataByOS($dbhandle,'Mac OS') ?>
 	<div class="row">
     <?php 
 	for($i = 1; $i<=3;$i++) {$product_mac = mysqli_fetch_array($product_macs);
@@ -209,7 +209,7 @@ $products_windows = getWindow($dbhandle);
 			<h2 class="product-title">Android</h2>
 		</div>
 	</div>
-<?php $product_Androids = getAndroid($dbhandle) ?>
+<?php $product_Androids = getDataByOS($dbhandle,'Android') ?>
 	<div class="row">
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_android = mysqli_fetch_array($product_Androids);
@@ -255,7 +255,7 @@ $products_windows = getWindow($dbhandle);
 			<h2 class="product-title">iOS</h2>
 		</div>
 	</div>
-<?php $product_iOS = getiOS($dbhandle) ?>
+<?php $product_iOS = getDataByOS($dbhandle,'iOS') ?>
 	<div class="row">
      <?php 
 	for($i = 1; $i<=3;$i++) {$product_ios = mysqli_fetch_array($product_iOS);

@@ -1,6 +1,7 @@
 
 <?php
-
+	/*Include controler*/
+	
 	require "controller/connectdatabase.php";
 	require "controller/indexController.php";
 	require "controller/searchController.php";
@@ -21,7 +22,6 @@
   	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 	
   	<script type="text/javascript" src="bootstrap/jQuery/jquery-3.1.0.min.js"></script>  
   	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="js/search.js"></script>
   	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -41,10 +41,7 @@
 			<a href="?content=index"><img src="image/logo.png" alt=""></a>
 		</span>
 		<span>
-			<formid action="" method="GET" role="form">
 			<input id="search" type="text" name="search" placeholder="Tìm kiếm phần mềm...">
-			</form>
-			
 			<a id="page-infor" href="#"></a>
 			<a id="account" href="register.php"></a>
 		</span>
@@ -77,10 +74,7 @@
 			
 						<!-- Center Body -->
 			<div class="col-md-7 product center">
-				<!-- <?php //require "contents/center_body.php"; ?> -->
-				<!-- <?php //require "contents/search.php"; ?> -->
-				<!-- <?php //require "contents/download.php"; ?> -->
-				<!-- <?php //require "contents/view.php"; ?> -->
+				
 
 				<?php
 					switch ($contents) {
@@ -100,10 +94,7 @@
 							require "contents/center_body.php";
 							break;
 					}
-					
-				
-
-					
+						
 				?>
 
 			</div>
@@ -111,8 +102,7 @@
 
 						<!-- Right Body -->
 			<div class="col-md-3">
-				<!-- <?php //require "contents/right_body.php"; ?>	 -->
-				<!-- <?php //require "contents/related.php"; ?> -->
+				
 				<?php
 					if ($contents == 'view' || $contents == 'download')
 						require "contents/related.php";
@@ -127,7 +117,7 @@
 		<div>
 			<table>
 				<tr>
-					<td><a href="#">TRANG CHỦ</a></td>
+					<td><a href="?content=index">TRANG CHỦ</a></td>
 					<td><a href="#">HỆ ĐIỀU HÀNH</a></td>
 					<td><a href="#">LOẠI PHẦN MỀM</a></td>
 					<td><a href="#">VỀ WEBSITE</a></td>
@@ -136,21 +126,22 @@
 					<td></td>
 					<td>
 						<ul>
-							<li><a href="#">Window</a></li>
-							<li><a href="#">MacOS</a></li>
-							<li><a href="#">Android</a></li>
-							<li><a href="#">iOS</a></li>
+							<li><a href="?contents=product&&pass=Window">Window</a></li>
+							<li><a href="?contents=product&&pass=Mac OS">Mac OS</a></li>
+                            <li><a href="?contents=product&&pass=Android">Android</a></li>
+							<li><a href="?contents=product&&pass=iOS">iOS</a></li>
+                            
 						</ul>
 					</td>
 					<td>
 						<ul>
-							<li><a href="#">Diệt virus</a></li>
-							<li><a href="#">Trình duyệt</a></li>
-							<li><a href="#">Văn phòng</a></li>
-							<li><a href="#">Học tập</a></li>
-							<li><a href="#">Nghe nhạc</a></li>
-							<li><a href="#">Xem phim</a></li>
-							<li><a href="#">Khác</a></li>
+							<li><a href="?contents=product&&pass=Diệt Virus">Diệt virus</a></li>
+							<li><a href="?contents=product&&pass=Trình duyệt">Trình duyệt</a></li>
+							<li><a href="?contents=product&&pass=Văn phòng">Văn phòng</a></li>
+							<li><a href="?contents=product&&pass=Học tập">Học tập</a></li>
+							<li><a href="?contents=product&&pass=Nghe nhạc">Nghe nhạc</a></li>
+							<li><a href="?contents=product&&pass=Xem phim">Xem phim</a></li>
+							<li><a href="?contents=product&&pass=Khác">Khác</a></li>
 						</ul>
 					</td>
 					<td></td>

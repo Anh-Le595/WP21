@@ -2,55 +2,103 @@
 
 switch($pass){
 	case 'Window':
-		$productDatas=getWindow($dbhandle);
-		$pathImage = "image/window.svg";
+		$result = getCountOS($dbhandle,$pass);
 		break;
 	case 'Mac OS':
-		$productDatas=getMacOS($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountOS($dbhandle,$pass);
 		break;
 	case 'Android':
-		$productDatas=getAndroid($dbhandle);
-		$pathImage = "image/android.svg";
+		$result = getCountOS($dbhandle,$pass);
 		break;
 	case 'iOS':
-		$productDatas=getWindow($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountOS($dbhandle,$pass);
 		break;
 	case 'Diệt Virus':
-		$productDatas=getVirus($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'virus');
 		break;
 	case 'Văn Phòng':
-		$productDatas=getOffice($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'office');
 		break;
 	case 'Học Tập':
-		$productDatas=getStudy($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'study');
 		break;
 	case 'Trình Duyệt':
-		$productDatas=getBrowser($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'browser');
 		break;
 	case 'Nghe Nhạc':
-		$productDatas=getMusic($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'music');
 		break;
 	case 'Xem Phim':
-		$productDatas=getMovie($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'movie');
 		break;
 	case 'Khác':
-		$productDatas=getOthers($dbhandle);
-		$pathImage = "image/apple.svg";
+		$result = getCountCate($dbhandle,'others');
 		break;
 	default:
 		break;
 }
 
+$row = mysqli_fetch_assoc($result);
+$total_records = $row['Total'];
+$current_page = isset($_GET['page']) ? $_GET['page']:1;
+$limit = 5;
+$total_page = ceil($total_records/$limit);
 
-
+if ($current_page > $total_page){
+    $current_page = $total_page;
+}
+else if ($current_page < 1){
+    $current_page = 1;
+}
+$start = ($current_page - 1) * $limit;
+switch($pass){
+	case 'Window':
+		$productDatas=getDataByOSLimit($dbhandle,$pass,$start,$limit);
+		$pathImage = "image/window.svg";
+		break;
+	case 'Mac OS':
+		$productDatas=getDataByOSLimit($dbhandle,$pass,$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Android':
+		$productDatas=getDataByOSLimit($dbhandle,$pass,$start,$limit);
+		$pathImage = "image/android.svg";
+		break;
+	case 'iOS':
+		$productDatas=getDataByOSLimit($dbhandle,$pass,$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Diệt Virus':
+		$productDatas=getDataByTagLimit($dbhandle,'virus',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Văn Phòng':
+		$productDatas=getDataByTagLimit($dbhandle,'office',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Học Tập':
+		$productDatas=getDataByTagLimit($dbhandle,'study',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Trình Duyệt':
+		$productDatas=getDataByTagLimit($dbhandle,'browser',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Nghe Nhạc':
+		$productDatas=getDataByTagLimit($dbhandle,'music',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Xem Phim':
+		$productDatas=getDataByTagLimit($dbhandle,'movie',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	case 'Khác':
+		$productDatas=getDataByTagLimit($dbhandle,'others',$start,$limit);
+		$pathImage = "image/apple.svg";
+		break;
+	default:
+		break;
+}
 ?>
 
 						<!-- Center Body -->
@@ -62,7 +110,7 @@ switch($pass){
 									<li><a href="#">Window</a></li>
 								</ul>
 								<br> -->
-								<h2 class="product-title"><?php echo $pass ?></h2>
+								<h2 class="product-title"><?php echo  $pass ?></h2>
 							</div>
 						</div>
 
@@ -70,7 +118,7 @@ switch($pass){
 						==========================   PRODUCT  ====================================
 						======================================================================== -->
 	<?php 
-	for($i = 1;$i<10;$i++) {$product = mysqli_fetch_array($productDatas)
+	while ($product = mysqli_fetch_assoc($productDatas)){
 	?>	
 						<div class="row product-item">
 							<div class="col-md-12">
@@ -110,14 +158,23 @@ switch($pass){
 
 				<!-- separate pages -->
 				<ul class="paging">
-					<li><button>&larr;</button></li>
+                 <?php
+				 	if ($current_page > 1 && $total_page > 1){
+						echo'<li><a href="?contents=product&&pass='.$pass.'&&page='.($current_page - 1).'" class="btn btn-default">&larr;</a</li>';
+					}
 					
-					<li><button>1</button></li>
-                    <li><button>2</button></li>
-                    <li><button>3</button></li>
-					
-					<li><button>&rarr;</button></li>
-				</ul>
+					for ($i = 1; $i <= $total_page;$i++){
+						if($i == $current_page){
+							echo '<li><button class="btn btn-default active">'.$i.'</button></li>';
+						}else{
+							echo '<li><a a href="?contents=product&&pass='.$pass.'&&page='.$i.'" class="btn btn-default">'.$i.'</a></li>';
+						}
+					}
+					if($current_page < $total_page && $total_page > 1){
+						 echo '<li><a href="?contents=product&&pass='.$pass.'&&page='.($current_page+1).'" class="btn btn-default" >&rarr;</a></li> ';
+					}
+				  ?>
+				</ul>           
 			
 			
 

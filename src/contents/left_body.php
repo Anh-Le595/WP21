@@ -20,11 +20,5 @@
 	<?php
 	}
 	?> 
-	<!-- <div class="item"><a href="#">Diệt Virus</a></div>
-	<div class="item"><a href="#">Trình Duyệt</a></div>
-	<div class="item"><a href="#">Văn Phòng</a></div>
-	<div class="item"><a href="#">Học Tập</a></div>
-	<div class="item"><a href="#">Nghe Nhạc</a></div>
-	<div class="item"><a href="#">Xem Phim</a></div>
-	<div class="item"><a href="#">Khác</a></div> -->
+	
 </div>

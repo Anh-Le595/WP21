@@ -25,7 +25,7 @@ $productDowns =  getRank_down($dbhandle);
 					?>
 			    		<tr>
 			    			<td><?php echo $i ?></td>
-			    			<td><a href="?contents=download&&id=<?php echo $product['ID'] ?>"><?php echo $product['Name'] ?></a></td>
+			    			<td><a href="?contents=view&&id=<?php echo $product['ID'] ?>"><?php echo $product['Name'] ?></a></td>
 			    			<td><?php echo $product['NumberDownload'] ?></td>
 			    		</tr>
 			    	<?php } ?>
@@ -44,7 +44,7 @@ $productRates =  getRank_rate($dbhandle);
 					?>
 			    		<tr>
 			    			<td><?php echo $i ?></td>
-			    			<td><a href="?contents=download&&id=<?php echo $product['ID'] ?>"><?php echo $product['Name'] ?></a></td>
+			    			<td><a href="?contents=view&&id=<?php echo $product['ID'] ?>"><?php echo $product['Name'] ?></a></td>
 			    			<td><?php echo $product['Rate'] ?></td>
 			    		</tr>
 			    		<?php } ?>

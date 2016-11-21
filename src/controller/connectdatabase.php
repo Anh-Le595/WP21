@@ -1,7 +1,7 @@
 <?php
 	$db_name = "db_soft_share";
-	$username = "admin";
-	$password = "123";
+	$username = "root";
+	$password = "";
 	$hostname = "localhost";
 
 	$dbhandle = mysqli_connect($hostname, $username, $password)

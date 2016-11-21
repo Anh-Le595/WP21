@@ -198,7 +198,8 @@ ul.paging li{
 	display: inline;
 }
 
-ul.paging li button{
+ul.paging li .button{
+
 	text-decoration: none;
 	margin-right: 0px;
 	width: 30px;

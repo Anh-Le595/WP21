@@ -2,7 +2,7 @@
 $productDatas=getDataById($id,$dbhandle);
 $product = mysqli_fetch_array($productDatas);
 $tag = $product['Tag'];
-$items = getDataByTag($tag,$dbhandle);
+$items = getDataByTag($dbhandle,$tag);
 
 ?>
 <div id="right">
