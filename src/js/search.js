@@ -15,6 +15,20 @@ $(function(){
 		var searchText = $('#searchbox').val();
 		window.location = "?contents=search&searchText="+searchText;
 	})
+	$('#new').click(function(){
+		$('#new').addClass("press");
+		$('#az').removeClass();
+		$('#evaluate').removeClass();
+	})
+	$('#az').click(function(){
+		$('#az').addClass("press");
+		$('#new').removeClass();
+		$('#evaluate').removeClass();
+	})
+	$('#evaluate').click(function(){
+		$('#evaluate').addClass("press");
+		$('#az').removeClass();
+		$('#new').removeClass();
+	})
 });
 
-// JavaScript Document

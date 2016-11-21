@@ -8,9 +8,9 @@
 	<input type="text" id="searchbox" placeholder="Tìm kiếm phần mềm..." value="<?php echo $searchText; ?>">
 	<button type="submit" id="btn-search">TÌM</button><br>
 	<div class="sort">
-		<button class="active">Cập nhật mới nhất</button>
-		<button>Thứ tự A-Z</button>
-		<button>Đánh giá cao nhất</button>
+		<button id="new">Cập nhật mới nhất</button>
+		<button id="az">Thứ tự A-Z</button>
+		<button id="evaluate">Đánh giá cao nhất</button>
 	</div>
 </div>
 
@@ -80,9 +80,9 @@ if ($searchText != '') {
 
 <!-- separate pages -->
 <ul class="paging">
-	<li><button>&larr;</button></li>
+	<li><button id="btnPrev">&larr;</button></li>
 	<li><button>1</button></li>
-	<li><button class="active">2</button></li>
+	<li><button>2</button></li>
 	<li><button>3</button></li>
-	<li><button>&rarr;</button></li>
+	<li><button id="btnNext">&rarr;</button></li>
 </ul>

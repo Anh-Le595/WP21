@@ -148,10 +148,14 @@ div.search .sort button{
 	margin-bottom: 10px;
 }
 
-div.search .sort button:focus{
+/*div.search .sort button:focus{
 	background-color: #7a9e97;
-}
+}*/
 
+.press {
+	/*background-color: #7a9e97;*/
+	background-color: yellow;
+}
 
 /* ===================== product information ===================== */
 

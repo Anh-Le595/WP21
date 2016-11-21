@@ -49,5 +49,5 @@ function carousel() {
 
     cir[myIndex-1].style.backgroundColor = "rgba(122,157,150,1)";
 
-    setTimeout(carousel, 5000);
+    setTimeout(carousel, 3000);
 }
