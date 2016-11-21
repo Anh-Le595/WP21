@@ -80,7 +80,7 @@
 	</ul>
 </div>
 
-<script type="text/javascript" src="js/slideshow.js"></script>
+<script type="text/javascript" src="js/slideshow2.js"></script>
 
 <div class="home-item">
 	<div class="row title">
