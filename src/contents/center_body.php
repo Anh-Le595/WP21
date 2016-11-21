@@ -5,92 +5,75 @@
 </script>
 
 <div id="slideshow" class="row">
-	<div id="left-card" class="col-xs-1">
-		<div>
-			<img id="toleft" class="arrow" src="../image/arrow.svg" alt="">
-		</div>
-	</div>
-	<div id="center-card" class="col-xs-10">
-		<div class="row">
-			<h2 class="header-slideitem">AVAST FREE ANTIVIRUS</h2>
-			<h2 class="header-slideitem">AVIRA ANTIVIRUS</h2>
-			<h2 class="header-slideitem">AVG FREE ANTIVIRUS</h2>
-		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<!-- ======================================================================= -->
-				<img src="../image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
-				<img src="../image/logo_avira.png" alt="" class="product-logo-big image-slideitem">
-				<img src="../image/logo_avg.jpg" alt="" class="product-logo-big image-slideitem">
-			</div>
-			<div class="col-sm-6" style="text-align:center;">
-				<div class="star-group">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-					<img class="star" src="../image/star.svg" alt="">
-				</div>
-				<p class="free">FREE</p>
-				<button class="btn-download" name="btndownload" onclick="demo()" style="display:block;margin:20px auto;">DOWNLOAD</button>
-			</div>
-		</div>
-		<div id="card-infor" class="row" style="margin-left:20px;">
-			<div class="col-sm-6">
-				<p style="display:inline;" class="infor1-slideitem">
-					Phát hành:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Công ty 1<br>
-					Phiên bản:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.0<br>
-					Dung lượng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100MB<br>
-					Cập nhật:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25/09/2016<br>
-				</p>
-				<p style="display:inline;" class="infor1-slideitem">
-					Phát hành:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Công ty 2<br>
-					Phiên bản:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.0.0<br>
-					Dung lượng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200MB<br>
-					Cập nhật:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12/10/2016<br>
-				</p>
-				<p style="display:inline;" class="infor1-slideitem">
-					Phát hành:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Công ty 3<br>
-					Phiên bản:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.0.0<br>
-					Dung lượng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300MB<br>
-					Cập nhật:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12/10/2016<br>
-				</p>
-			</div>
-			<div class="col-sm-6">
-				<p style="display:inline;" class="infor2-slideitem">
-					Lượt tải:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 lượt<br>
-					Xem thêm:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</p>
-				<p style="display:inline;" class="infor2-slideitem">
-					Lượt tải:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200 lượt<br>
-					Xem thêm:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</p>
-				<p style="display:inline;" class="infor2-slideitem">
-					Lượt tải:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300 lượt<br>
-					Xem thêm:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</p>
-				<ul class="inf" style="display:inline">
-					<li><a href="#">Window</a></li>
-					<li><a href="#">Mac OS</a></li>
-				</ul>
-				<div>
-					<img src="image/window.svg" alt="" class="product-icon">
-					<img src="image/apple.svg" alt="" class="product-icon">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="right-card" class="col-xs-1">
-		<div>
-			<img id="toright" class="arrow" src="../image/arrow.svg" alt="">
-		</div>
-	</div>
+	<div class="row" id="slideshow">
+		<!-- <img id="toleft" class="arrow" src="image/arrow.svg" alt="" onclick="leftarrow()">
+		<img id="toright" class="arrow" src="image/arrow.svg" alt="" onclick="rightarrow()"> -->
 
-	
+		<div id="hidden-item"></div>
+		
+		<div class="slideshow-item slow-transition" id="left-left-item">
+			<div>
+				<div class="row">
+					<h2 class="header-slideitem">AVAST ANTIVIRUS</h2>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
+					</div>
+					<div class="col-sm-6" style="text-align:center;">
+						<div class="star-group">
+							<img class="star" src="image/star.svg" alt="">
+							<img class="star" src="image/star.svg" alt="">
+							<img class="star" src="image/star.svg" alt="">
+							<img class="star" src="image/star.svg" alt="">
+							<img class="star" src="image/star.svg" alt="">
+						</div>
+						<p class="free">FREE</p>
+						<button class="btn-download" style="display:block;margin:20px auto;">DOWNLOAD</button>
+					</div>
+				</div>
+				<div class="card-infor" class="row" style="margin-left:20px;">
+					<div class="col-sm-6 col-xs-12" style="font-family:'sanfrancisco';text-align:left;">
+						Phát hành:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Công ty 1<br>
+						Phiên bản:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.0<br>
+						Dung lượng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100MB<br>
+						Cập nhật:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25/09/2016<br>
+					</div>
+					<div class="col-sm-6 col-sx-12" style="font-family:'sanfrancisco';text-align:left;">
+						Lượt tải:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 lượt<br>
+						Lượt đánh giá:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 lượt
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slideshow-item slow-transition" id="left-item">
+			<div>
+				222222222222222
+			</div>
+		</div>
+		<div class="slideshow-item slow-transition" id="center-item">
+			<div>
+				33333333333333
+			</div>
+		</div>
+		<div class="slideshow-item slow-transition" id="right-item">
+			<div>
+				444444444444444444
+			</div>
+		</div>
+		<div class="slideshow-item slow-transition" id="right-right-item">
+			<div>
+				555555555555555
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="row">
 	<ul id="circle">
+		<li><div class="circle-slideitem"></div></li>
+		<li><div class="circle-slideitem"></div></li>
 		<li><div class="circle-slideitem"></div></li>
 		<li><div class="circle-slideitem"></div></li>
 		<li><div class="circle-slideitem"></div></li>
