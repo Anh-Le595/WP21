@@ -51,6 +51,7 @@ else if ($current_page < 1){
     $current_page = 1;
 }
 $start = ($current_page - 1) * $limit;
+
 switch($pass){
 	case 'Window':
 		$productDatas=getDataByOSLimit($dbhandle,$pass,$start,$limit);

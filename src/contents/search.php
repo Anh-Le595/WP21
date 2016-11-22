@@ -2,6 +2,21 @@
 	$searchText = "";
 	if (isset($_GET["searchText"]))
 		$searchText = $_GET["searchText"];
+		
+$result = getCountSearch($dbhandle,$searchText);		
+$row = mysqli_fetch_assoc($result);
+$total_records = $row['Total'];
+$current_page = isset($_GET['page']) ? $_GET['page']:1;
+$limit = 5;
+$total_page = ceil($total_records/$limit);
+
+if ($current_page > $total_page){
+    $current_page = $total_page;
+}
+else if ($current_page < 1){
+    $current_page = 1;
+}
+$start = ($current_page - 1) * $limit;
 
 ?>
 <div class="row search">
@@ -19,10 +34,8 @@
 ======================================================================== -->
 <?php
 if ($searchText != '') {
-	$productNames = searchByProductName($dbhandle,$searchText);
-	$count = 1;
-	$product = mysqli_fetch_array($productNames);
-	while (true) {
+	$productNames = searchByProductName($dbhandle,$searchText,$start,$limit);
+	while ($product = mysqli_fetch_assoc($productNames)) {
 		
 
 ?>
@@ -66,23 +79,26 @@ if ($searchText != '') {
 		</div>
 		</div>
 </div>
-<?php
-		$count++;
-		if ($count > 6) {
-			break;
-		}
-		$product = mysqli_fetch_array($productNames);
-		if (!$product)
-			break;
-	}
-}
-?>
+<?php 
+	} 
+} ?>
 
 <!-- separate pages -->
 <ul class="paging">
-	<li><button id="btnPrev">&larr;</button></li>
-	<li><button>1</button></li>
-	<li><button>2</button></li>
-	<li><button>3</button></li>
-	<li><button id="btnNext">&rarr;</button></li>
+	 <?php
+				 	if ($current_page > 1 && $total_page > 1){
+						echo'<li><a href="?contents=search&&searchText='.$searchText.'&&page='.($current_page - 1).'" class="btn btn-default">&larr;</a</li>';
+					}
+					
+					for ($i = 1; $i <= $total_page;$i++){
+						if($i == $current_page){
+							echo '<li><button class="btn btn-default active">'.$i.'</button></li>';
+						}else{
+							echo '<li><a a href="?contents=search&&searchText='.$searchText.'&&page='.$i.'" class="btn btn-default">'.$i.'</a></li>';
+						}
+					}
+					if($current_page < $total_page && $total_page > 1){
+						 echo '<li><a href="?contents=search&&searchText='.$searchText.'&&page='.($current_page+1).'" class="btn btn-default" >&rarr;</a></li> ';
+					}
+				  ?>
 </ul>
