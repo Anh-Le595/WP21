@@ -11,62 +11,71 @@
 
 		<div id="hidden-item"></div>
 		
-		<div class="slideshow-item slow-transition" id="left-left-item">
-			<div>
-				<div class="row">
-					<h2 class="header-slideitem">AVAST ANTIVIRUS</h2>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<img src="image/logo_avast.jpg" alt="" class="product-logo-big image-slideitem">
-					</div>
-					<div class="col-sm-6" style="text-align:center;">
-						<div class="star-group">
+		<?php
+			$product_macs = getDataByOS($dbhandle,'Mac OS');
+			for ($i=1;$i<=5;$i++){
+				$product_mac = mysqli_fetch_array($product_macs);
+				switch ($i) {
+					case 1:
+						echo '<div class="slideshow-item slow-transition" id="left-left-item">';
+						break;
+
+					case 2:
+						echo '<div class="slideshow-item slow-transition" id="left-item">';
+						break;
+
+					case 3:
+						echo '<div class="slideshow-item slow-transition" id="center-item">';
+						break;
+
+					case 4:
+						echo '<div class="slideshow-item slow-transition" id="right-item">';
+						break;
+
+					case 5:
+						echo '<div class="slideshow-item slow-transition" id="right-right-item">';
+						break;
+					
+					default:
+						break;
+				}
+
+				echo '<div>';
+				echo '<div class="row">';
+				echo '<h2 class="header-slideitem">'.$product_mac['Name'].'</h2>';
+				echo '</div>';
+				echo '<div class="row">';
+				echo '<div class="col-sm-6">';
+				echo '<img src='.$product_mac['Logo'].' alt="" class="product-logo-big image-slideitem">';
+				echo '</div>';
+				echo '<div class="col-sm-6">';
+				echo '<div class="star-group">
 							<img class="star" src="image/star.svg" alt="">
 							<img class="star" src="image/star.svg" alt="">
 							<img class="star" src="image/star.svg" alt="">
 							<img class="star" src="image/star.svg" alt="">
 							<img class="star" src="image/star.svg" alt="">
+					</div>';
+				echo '<p class="free">FREE</p>';
+				echo '<button class="btn-download" style="display:block;margin:20px auto;">DOWNLOAD</button>';
+				echo '</div>
 						</div>
-						<p class="free">FREE</p>
-						<button class="btn-download" style="display:block;margin:20px auto;">DOWNLOAD</button>
+						<div class="slideshow-infor" class="row" style="margin-left:20px;text-align:left">
+							<div class="col-sm-6 col-xs-12" style="font-family:'.'"sanfrancisco"'.';text-align:left;">';
+				echo 'Phát hành:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Công ty 1<br>
+								Phiên bản:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$product_mac['Version'].'<br>
+								Dung lượng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$product_mac['size'].'<br>
+							</div>';
+				echo '<div class="col-sm-6 col-sx-12" style="font-family:'.'"sanfrancisco"'.';text-align:left;">
+								Cập nhật:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$product_mac['UpdateTime'].'<br>
+								Lượt tải:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$product_mac['NumberDownload'].'<br>
+								Lượt đánh giá:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.'10'.'
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="card-infor" class="row" style="margin-left:20px;">
-					<div class="col-sm-6 col-xs-12" style="font-family:'sanfrancisco';text-align:left;">
-						Phát hành:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Công ty 1<br>
-						Phiên bản:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.0<br>
-						Dung lượng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100MB<br>
-						Cập nhật:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25/09/2016<br>
-					</div>
-					<div class="col-sm-6 col-sx-12" style="font-family:'sanfrancisco';text-align:left;">
-						Lượt tải:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 lượt<br>
-						Lượt đánh giá:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 lượt
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="slideshow-item slow-transition" id="left-item">
-			<div>
-				222222222222222
-			</div>
-		</div>
-		<div class="slideshow-item slow-transition" id="center-item">
-			<div>
-				33333333333333
-			</div>
-		</div>
-		<div class="slideshow-item slow-transition" id="right-item">
-			<div>
-				444444444444444444
-			</div>
-		</div>
-		<div class="slideshow-item slow-transition" id="right-right-item">
-			<div>
-				555555555555555
-			</div>
-		</div>
+				</div>';
+			}
+		?>
 	</div>
 </div>
 

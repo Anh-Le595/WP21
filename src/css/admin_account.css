@@ -1,0 +1,296 @@
+span{
+	font-family: "Maitree";
+}
+
+
+
+/*========================================================================
+==========================   SIDEBAR  ====================================
+========================================================================*/
+
+.container{
+	margin-top: 70px;
+}
+
+div#sidebar{
+	width: 100%;
+	background-color: white;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div.menu{
+	height: 30px;
+	width: 90%;
+	background-image: url("Image/bg2.png");
+	background-size: 84px 30px;
+	background-position: center;
+	text-align: center;
+	margin: 20px 10px auto;
+}
+
+div.menu h5{
+	padding-top: 7px;
+}
+
+div.item{
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+}
+
+div.item:last-child{
+	margin-bottom: 20px;
+}
+
+		/*Center Body*/
+
+img#ic_img{
+	float: left;
+	margin-left: 10px;
+	background-image: url("Image/window.svg");
+	height: 50px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+div#hd{
+	margin-left: 30px;
+}
+
+img#header_center_bd{
+	box-shadow: 1px 1px 1px;
+	border-radius: 5px;
+	margin: 10px;
+	width: 600px;
+	/*background-repeat: 3;*/
+	/*height: 60px;*/
+	max-height: 60px;
+	/*background-image: url("Image/bg3.png");*/
+	/*background-repeat: no-repeat;*/
+}
+
+span#wd{
+	display: inline;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+input#search_frame{
+	width: 100%;
+	margin: 20px;
+	border-radius: 5px;
+}
+button#btn_search{
+	width: 50%;
+	margin: 15px;
+	font-weight: bold;
+}
+
+button.tab{
+	margin: 20px;
+	border-radius: 5px;
+	height: 40px;
+}
+
+div.user{
+	margin-left: 30px;
+	/*border-radius: 5px;*/
+	/*box-shadow: 1px 1px 1px 1px;*/
+	margin-right: 20px;
+}
+
+div img.img_star{
+	height: 15px;
+}
+
+/*========================================================================
+==========================   TABLE  ====================================
+========================================================================*/
+
+
+/* ===================== product information ===================== */
+
+div.product{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px 20px 20px 20px;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	background-color: white;
+	text-align: center;
+	overflow-x: scroll;
+}
+
+#btn-add-account{
+	margin-right: 
+}
+
+#admin h3{
+	margin: 20px 0;
+}
+
+#admin input{
+	border: 1px #7a9d96 solid;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+
+table#admin-content{
+	border: 1px solid black;
+	font-family: "sanfrancisco";
+	text-align: left;
+	display: inline-table;
+}
+
+table#admin-content tr:first-child{
+	font-family: "Maitree";
+}
+
+table#admin-content td{
+	border: 1px solid black;
+	padding: 5px 10px 5px 10px;
+	max-width: 180px;
+}
+
+/* ===================== paging ===================== */
+
+ul.paging{
+	list-style: none;
+	margin: 20px auto;
+	text-align: center;
+}
+
+ul.paging li{
+	display: inline;
+}
+
+ul.paging li button{
+	text-decoration: none;
+	margin-right: 0px;
+	width: 30px;
+	height: 30px;
+	border: 1px #7a9d96 solid;
+	border-radius: 5px;
+	background-color: #ebebeb;
+	text-align: center;
+}
+
+ul.paging li button:focus{
+	background-color: #7a9d96;
+}
+
+/* ===================== popup ===================== */
+
+#popup-account{
+	/*margin: 50px 0 50px 0;
+	background-color: white;
+	border-radius: 7px;
+	border: 1px rgba(235,235,235,1) solid;
+	padding: 0 20px;
+	padding-bottom: 20px;
+	text-align: left;*/
+}
+
+#popup-account label{
+	margin-top: 20px;
+	font-family: 'sanfrancisco';
+}
+
+#popup-account h5{
+	margin-top: 20px;
+}
+
+#popup-account input{
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px #7a9e97 solid;
+}
+
+#popup-account select{
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px #7a9e97 solid;
+	font-family: 'sanfrancisco';
+}
+
+#popup-account input[type="submit"]{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+div#right{
+	width: 100%;
+	border: 1px rgba(235,235,235,1) solid;
+	border-radius: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+	padding: 20px;
+}
+
+
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.bxh{
+		margin-left: 0;
+	}
+	.bxh tr td:last-child{
+		padding-right: 5px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.bxh{
+		text-align: center;
+	}
+	.bxh table{
+		display: inline;
+	}
+	div.item{
+		text-align: center;
+		margin-left: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+@media only screen and (max-width : 594px) {
+	.btn-download{
+		margin: 20px 0 30px 110px;
+	}
+}
+
+@media only screen and (max-width : 524px) {
+	.search input{
+		margin-bottom: 10px;
+	}
+
+	#btn-search{
+		margin-top: 0;
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+}
+
+@media only screen and (max-width : 448px) {
+	.btn-download{
+		margin: 20px 0 0 20px;
+	}
+	.product-logo{
+		margin-bottom: 20px;
+	}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

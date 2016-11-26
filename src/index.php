@@ -11,6 +11,11 @@
 		$contents = $_GET["contents"];
 	}
 	else $contents = "";
+
+	if(isset($_GET["left"])) {
+		$left = $_GET["left"];
+	}
+	else $left = "";
 ?>
 
 
@@ -35,6 +40,8 @@
 	<link rel="stylesheet" type="text/css" href="css/download.css">
 	<link rel="stylesheet" type="text/css" href="css/view.css">
     <link rel="stylesheet" type="text/css" href="css/product.css">
+    <link rel="stylesheet" type="text/css" href="css/admin_account.css">
+    <link rel="stylesheet" type="text/css" href="css/admin_product.css">
 </head>
 <body>
 
@@ -110,7 +117,16 @@
 		<div class="row">
 						<!-- Left Body -->
 			<div class="col-md-2">
-				<?php require "contents/left_body.php"; ?>
+				<?php
+					switch ($left) {
+						case 'admin':
+							require "contents/admin_left.php";
+							break;		
+						default:
+							require "contents/left_body.php";
+							break;
+					}
+				?>
 			</div>
 			
 						<!-- Center Body -->
@@ -131,6 +147,12 @@
 						case 'product':
 							require "contents/product.php";
 							break;
+						case 'admin_account':
+							require "contents/admin_account_center.php";
+							break;
+						case 'admin_product':
+							require "contents/admin_product_center.php";
+							break;
 						default:
 							require "contents/center_body.php";
 							break;
@@ -147,6 +169,10 @@
 				<?php
 					if ($contents == 'view' || $contents == 'download')
 						require "contents/related.php";
+					else if ($contents == 'admin_account')
+						require "contents/admin_account_right.php";
+					else if ($contents == 'admin_product')
+						require "contents/admin_product_right.php";
 					else 
 						require "contents/right_body.php";
 				?>

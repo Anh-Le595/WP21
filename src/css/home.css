@@ -121,7 +121,6 @@ div.product{
 	overflow: hidden;
 	padding: 0;
 	margin: 0;
-	text-align: center;
 }
 
 #slideshow .slideshow-item{
@@ -313,16 +312,6 @@ ul.inf li:last-child:after{
 	transition: all 0.7 ease-in-out;
 	background-color: red;
 } 
-
-.card-infor table{
-	font-family: "Sanfrancisco";
-	text-align: left;
-}
-
-.card-infor table td{
-	padding: 0 15px;
-	padding-left: 20px;
-}
 
 /* ===================== title ===================== */
 
