@@ -1,5 +1,5 @@
-
 <?php
+	session_start();
 	/*Include controler*/
 	
 	require "controller/connectdatabase.php";
@@ -12,6 +12,9 @@
 	}
 	else $contents = "";
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -45,9 +48,45 @@
 		<span>
 			<input id="search" type="text" name="search" placeholder="Tìm kiếm phần mềm...">
 			<a id="page-infor" href="#"></a>
-			<a id="account" href="register.php"></a>
+			
+
+			<?php
+				if(isset($_SESSION['check_log'])){
+					if($_SESSION['check_log'] == true){
+			?>
+						<span id="popup-infor">This is our awesome Web Programming assignment project!</span>
+						<a  href="" class="account">
+							
+						</a>
+						<img src="image/account.svg" class="account">
+						<span id="popup-account">
+							<h5>
+							<!-- bang.le -->
+							<?php
+								if(isset($_SESSION['use']))
+									echo $_SESSION['use'];
+							?>
+							</h5>
+							<a href="#">Đổi mật khẩu</a>
+							<a href="#">Quản lí</a>
+							<a href="logout.php">Logout</a>
+						</span>
+				<?php		
+					}
+				}	else{
+				?>
+						<a  href="register.php">
+							<img src="image/login.svg" class="account">
+						</a>
+
+					<?php
+						}	
+					?>
+			
+			<!-- <a class="account" href=""></a> -->
 		</span>
 	</div>
+
 
 	<script>
 		var button = document.getElementById('menu-toggle');
